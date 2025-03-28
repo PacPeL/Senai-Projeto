@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Alterações</title>
+    <link rel="stylesheet" href="/!css/styles.css">
+</head>
+<body>
+    <!-- Header consistente con otras páginas -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="/img/senai-logo.png" alt="Logo SENAI">
+            </div>
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="/!html/index.html">Início</a></li>
+                    <li><a href="/!html/history.html">Histórico</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="history-section">
+        <div class="container">
+            <h1>Histórico de Alterações</h1>
+            
+            <!-- Filtros -->
+            <div class="filtros-historicos">
+                <select id="filterMachine" class="filter-select">
+                    <option value="all">Todas as Máquinas</option>
+                </select>
+                
+                <select id="filterStatus" class="filter-select">
+                    <option value="all">Todos Status</option>
+                    <option value="operational">Operacional</option>
+                    <option value="maintenance">Manutenção</option>
+                </select>
+            </div>
+
+            <!-- Lista de histórico -->
+            <div id="historyList" class="history-list"></div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script type="module" src="/!javascripts/firebase.js"></script>
+    <script type="module" src="/!javascripts/history.js"></script>
+    <script type="module" src="/!javascripts/app.js"></script>
+
+</body>
+</html>

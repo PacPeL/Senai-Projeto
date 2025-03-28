@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca de Máquinas Industriais</title>
+    <link rel="stylesheet" href="/!css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="/img/senai-logo.png" alt="Logo SENAI">
+            </div>
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="/!html/index.html">Início</a></li>
+                    <li><a href="/!html/history.html">Histórico</a></li>
+                    <li><a href="#biblioteca">Biblioteca</a></li>
+                    <li><a href="#cadastrar">Cadastrar</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Sección Principal -->
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h1>Biblioteca de Máquinas <span>Industriais</span></h1>
+                <p>Controle completo do seu parque industrial</p>
+            </div>
+        </section>
+
+        <!-- Biblioteca de Máquinas -->
+        <section id="biblioteca" class="machine-library">
+            <div class="container">
+                <h2>Tipos de Máquinas</h2>
+                <div class="machines-grid">
+                    <!-- Torno -->
+                    <div class="machine-card" onclick="window.location.href='marcasTornos.html'">
+                        <div class="machine-image">
+                            <img src="/img/torno.png" alt="Tornos Industriais">
+                        </div>
+                        <div class="machine-info">
+                            <h3>Tornos</h3>
+                            <div class="machine-meta">
+                                <span>4 marcas disponíveis</span>
+                                <span class="status-badge status-operational">Ativo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fresadora -->
+                    <div class="machine-card" onclick="window.location.href='marcasFresadora.html'">
+                        <div class="machine-image">
+                            <img src="/img/fresadora.png" alt="Fresadoras Industriais">
+                        </div>
+                        <div class="machine-info">
+                            <h3>Fresadoras</h3>
+                            <div class="machine-meta">
+                                <span>3 marcas disponíveis</span>
+                                <span class="status-badge status-maintenance">Manutenção</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cortadora Laser -->
+                    <div class="machine-card" onclick="window.location.href='marcasCortadora.html'">
+                        <div class="machine-image">
+                            <img src="/img/cortelaser.png" alt="Cortadoras Laser">
+                        </div>
+                        <div class="machine-info">
+                            <h3>Cortadoras Laser</h3>
+                            <div class="machine-meta">
+                                <span>2 marcas disponíveis</span>
+                                <span class="status-badge status-waiting">Espera</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Función para el menú móvil
+        document.getElementById('menuToggle').addEventListener('click', () => {
+            const nav = document.querySelector('.menu-desktop');
+            nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
+    <script type="module" src="/!javascripts/firebase.js"></script>
+    <script type="module" src="/!javascripts/app.js"></script>
+</body>
+</html>
